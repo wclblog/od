@@ -18,7 +18,6 @@ function callback() {
 	id = id[2];
 	
 	var json = window.OverDrive.mediaItems[id];
-	console.log(json);
 	
 	var img = json.covers.cover150Wide.href;
 	var title = json.title;
