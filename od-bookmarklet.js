@@ -28,7 +28,7 @@ function callback() {
 	format = format.trim();
 	
 	
-	var html = '<a href="' + url + '"><img src="' + img + '" alt="Overdrive cover" class="alignleft" /></a> <a href="' + url + '">' + title + "</a>, " + author + ' (' + format + ')<br />"' + description + '" (Overdrive description)';
+	var html = '<a href="' + url + '"><img src="' + img + '" alt="Overdrive cover" class="alignleft" /></a> <a href="' + url + '">' + title + "</a>, " + author + ' (' + format + ')' + description + '<p>(Overdrive description)<\/p>';
 	prompt('ctrl+a ctrl+c to copy and paste', html);
 
 }
