@@ -1,5 +1,4 @@
 if (typeof jQuery == 'undefined') {
-	// http://www.hunlock.com/blogs/Howto_Dynamically_Insert_Javascript_And_CSS
 	var jQ = document.createElement('script');
 	jQ.type = 'text/javascript';
 	jQ.onload=runthis;
