@@ -17,7 +17,7 @@ function callback() {
 	}
 	else {
 	
-		var reserveId = jQuery(document).find('.js-details-cover-image:eq(0)').attr('src');
+		var reserveId = jQuery(document).find('.large-title.js-details-cover-image:eq(0)').attr('src');
 		var patt = /\{([^\}]*?)\}/;
 		reserveId = patt.exec(String(reserveId));
 
