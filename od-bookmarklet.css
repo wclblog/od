@@ -3,6 +3,7 @@
 .wcl .table td {
   padding: 0.75rem 0;
   vertical-align: top;
+  border: 1px solid #eee;
 }
 
 .wcl .table-striped tbody tr:nth-of-type(odd) {
