@@ -18,8 +18,17 @@ function callback() {
 	id = id[arrLength];
 
 	var json = window.OverDrive.mediaItems[id];
+	
+	var covers = json.covers;
+	
+	var coverUrls = [];
+	
+	Object.keys(covers).forEach(key => {
+		let value = covers[key];
+		coverUrls.push(value.href);
+	});
 
-	var img = json.covers.cover150Wide.href;
+	var img = coverUrls[0];	
 	var title = json.title;
 	var author = json.firstCreatorName;
 	var description = json.description;
@@ -27,7 +36,7 @@ function callback() {
 	format = format.trim();
 
 
-	var html = '<a href="' + url + '"><img src="' + img + '" alt="Overdrive cover" class="alignleft" /></a> <a href="' + url + '">' + title + "</a>, " + author + ' (' + format + ')' + description + '<p>(Overdrive description)<\/p>';
+	var html = '<a href="' + url + '"><img src="' + img + '" alt="Overdrive cover" class="alignleft" width="150" /></a> <a href="' + url + '">' + title + "</a>, " + author + ' (' + format + ')' + description + '<p>(Overdrive description)<\/p>';
 	prompt('ctrl+a ctrl+c to copy and paste', html);
 
 }
